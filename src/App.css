@@ -1,38 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Fredoka', sans-serif;
+}
+
 .App {
   text-align: center;
+  background: #23283e;
+  padding-top: 20px;
+  color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
+  height: 100px;
+  width: 80%;
+  background: #2a2f4c;
+  list-style: none;
+  margin: 0 auto 50px;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+.nav-link:hover {
+  font-size: 26px;
+}
+#top {
+  padding-top: 60px ;
+  padding-bottom: 160px;
+}
+#top h1 {
+  font-size: 80px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+#top h4 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+.cv {
+  padding: 20px 40px;
+  background-color: #2a2f4c;
+  border: none;
+  box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+.cv:hover {
+  background-color: #32385a;
+}
+.cv:active {
+  background-color: #2a2f4c;
+  box-shadow: 0 5px rgba(0, 0, 0, 0.2);
+  transform: translateY(4px);
+}
+
+.line {
+  width: 80%;
+  margin: 10px auto;
+  height: 1px;
+  background-color: #fff;
+  margin-bottom: 50px;
+}
+/* Card Project*/
+.cards {
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+}
+.card-project {
+  background: #2a2f4c;
+  padding-bottom: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.card-project:hover {
+  background: #32385a;
+  transform: scale(1.05);
+}
+.card-project__image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+.card-project__title {
+  padding: 20px;
+}
+.card-project__description {
+  padding: 0 20px;
+}
+.card-project__skills {
+  margin: 25px 0;
+}
+.card-project__skill {
+  padding: 0 10px;
+}
+.card-project__links a {
+  color: #fff;
+  text-decoration: none;
+} 
+.card-project__links a i {
+  font-size: 24px;
+  padding: 0 20px;
+  transition: all 0.2s ease-in-out;
+}
+.card-project__links a i:hover {
+  transform: scale(1.2);
+}
+/* About */
+
+.about {
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+}
+
+/* Skills */
+
+.skills {
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px;
+}
+.skill {
+  display: inline-block;
+  margin: 10px;
+  padding: 20px 40px;
+  background-color: #2a2f4c;
+  border: none;
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 16px;
+}
+
+/* Contact */
+.contact {
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px;
+}
+.contact h1 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.contact-link {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.contact-link p {
+  margin: 10px 20px;
+  font-size: 24px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.contact-link p:hover {
+  font-size: 28px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Footer */
+.footer {
+  padding-top: 25px;
+  padding-bottom: 60px;
 }
