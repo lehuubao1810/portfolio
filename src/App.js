@@ -39,7 +39,7 @@ function App() {
       <section id='top' data-aos="fade-right">
         <h1>Hi, I'm Le Huu Bao</h1>
         <h4>3rd year student majoring in IT<br></br>HCMC University of Transport</h4>
-        <button onClick={handleCV} className="cv" data-aos="fade-left">My CV</button>
+        <button onClick={handleCV} className="cv">My CV</button>
       </section>
       <section id='projects'>
         <hr className='line'></hr>
