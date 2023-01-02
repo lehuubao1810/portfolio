@@ -1,7 +1,7 @@
 const CardProject = (props) => {
     const skills = props.skills.split(", ");
     return(
-        <div className="card-project" data-aos="fade-right">
+        <div className="card-project">
             <div className="card-project__image">
                 <img src={props.image} alt={props.title} />
             </div>

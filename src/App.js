@@ -41,10 +41,10 @@ function App() {
         <h4>3rd year student majoring in IT<br></br>HCMC University of Transport</h4>
         <button onClick={handleCV} className="cv">My CV</button>
       </section>
-      <section id='projects'>
+      <section id='projects' >
         <hr className='line'></hr>
         <h1 data-aos="fade-in">Projects</h1>
-        <div className="cards" >
+        <div className="cards" data-aos="fade-in">
           <CardProject 
             title="Project 1"
             image="https://picsum.photos/500/300"
