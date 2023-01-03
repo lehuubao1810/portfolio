@@ -1,13 +1,7 @@
 import './App.css';
 import CardProject from './components/cardProject';
-import Aos from 'aos';
-import 'aos/dist/aos.css';
-import { useEffect } from 'react';
 
 function App() {
-  useEffect(() => {
-    Aos.init({duration: 1500});
-  }, []);
 
   const handleCV = () => {
     alert('Downloading...');
@@ -21,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <ul className="nav" data-aos="fade-in">
+        <ul className="nav">
           <li className="nav-item">
             <a className="nav-link" href="#projects">Projects</a>
           </li>
@@ -36,15 +30,15 @@ function App() {
           </li>
         </ul>
       </header>
-      <section id='top' data-aos="fade-right">
+      <section id='top'>
         <h1>Hi, I'm Le Huu Bao</h1>
         <h4>3rd year student majoring in IT<br></br>HCMC University of Transport</h4>
         <button onClick={handleCV} className="cv">My CV</button>
       </section>
       <section id='projects' >
         <hr className='line'></hr>
-        <h1 data-aos="fade-in">Projects</h1>
-        <div className="cards" data-aos="fade-in">
+        <h1>Projects</h1>
+        <div className="cards">
           <CardProject 
             title="Project 1"
             image="https://picsum.photos/500/300"
@@ -79,7 +73,7 @@ function App() {
           />
         </div>
       </section>
-      <section id='about' data-aos="fade-in">
+      <section id='about'>
         <hr className='line'></hr>
         <h1>About</h1>
         <div className="about">
@@ -92,9 +86,9 @@ function App() {
           </div>
         </div>
       </section>
-      <section id='skills' data-aos="fade-left">
+      <section id='skills'>
         <hr className='line'></hr>
-        <h1 data-aos="fade-in">Skills</h1>
+        <h1>Skills</h1>
         <div className="skills">
           {skills.map((skill, index) => (
             <div className="skill" key={index}>
@@ -103,7 +97,7 @@ function App() {
           ))}
         </div>
       </section>
-      <section id='contact' data-aos="fade-in">
+      <section id='contact'>
         <hr className='line'></hr>
         <h1>Contact</h1>
         <div className="contact">
