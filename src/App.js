@@ -84,7 +84,7 @@ function App() {
         <h1>About</h1>
         <div className="about">
           <div className="about-left">
-            <img src="https://picsum.photos/500/300" alt="avatar" />
+            <img src="https://picsum.photos/250/300" alt="avatar" />
           </div>
           <div className="about-right">
             <h1>Le Huu Bao</h1>
@@ -92,7 +92,7 @@ function App() {
           </div>
         </div>
       </section>
-      <section id='skills' data-aos="fade-in">
+      <section id='skills' data-aos="fade-left">
         <hr className='line'></hr>
         <h1 data-aos="fade-in">Skills</h1>
         <div className="skills">
