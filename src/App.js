@@ -46,6 +46,7 @@ function App() {
             skills= "React, NodeJS, MongoDB"
             github="https://github.com/lehuubao1810"
             preview="#"
+            type= "web"
           />
           <CardProject 
             title="MATH BIN"
@@ -54,6 +55,7 @@ function App() {
             skills= "React Native, JSON Server"
             github="https://github.com/lehuubao1810/QuizApp"
             preview="https://expo.dev/artifacts/eas/7fzsrYgBvYifpXfvuV1U2v.apk"
+            type= "mobile"
           />
           <CardProject 
             title="Project 3"
@@ -62,6 +64,7 @@ function App() {
             skills= "React, NodeJS, MongoDB"
             github="https://github.com/lehuubao1810"
             preview="#"
+            type= "web"
           />
           <CardProject 
             title="Project 4"
@@ -70,6 +73,7 @@ function App() {
             skills= "React, NodeJS, MongoDB"
             github="https://github.com/lehuubao1810"
             preview="#"
+            type= "web"
           />
         </div>
       </section>

@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
 
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,7 +8,7 @@
 }
 
 .App {
-  width: 100vw;
+  width: 100%;
   text-align: center;
   background: #23283e;
   padding-top: 20px;

@@ -1,5 +1,6 @@
 const CardProject = (props) => {
     const skills = props.skills.split(", ");
+    const isWeb = props.type === "web";
     return(
         <div className="card-project">
             <div className="card-project__image">
@@ -18,7 +19,13 @@ const CardProject = (props) => {
                 </div>
                 <div className="card-project__links">
                     <a href={props.github}><i className="fa-brands fa-github"></i></a>
-                    <a href={props.preview}><i className="fa-solid fa-up-right-from-square"></i></a>
+                    <a href={props.preview}>
+                        {
+                            isWeb ?
+                            <i className="fa-solid fa-up-right-from-square"></i> :
+                            <i className="fa-solid fa-mobile-screen"></i>
+                        }
+                    </a>
                 </div>
             </div>
         </div>
