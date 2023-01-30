@@ -54,8 +54,7 @@ function App() {
             description="A mobile application helps students improve their math skills by quizzes and exercises."
             skills= "React Native, JSON Server"
             github="https://github.com/lehuubao1810/QuizApp"
-            preview="https://expo.dev/artifacts/eas/7fzsrYgBvYifpXfvuV1U2v.apk"
-            type= "mobile"
+            preview="https://expo.dev/artifacts/eas/envG2WyKpFTJZ5hEBA3U5v.apk"
           />
           <CardProject 
             title="Project 3"
