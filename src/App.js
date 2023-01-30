@@ -50,11 +50,12 @@ function App() {
           />
           <CardProject 
             title="MATH BIN"
-            image="https://picsum.photos/500/300"
+            image="https://lehuubao1810.github.io/dataquiz/mathbin.png"
             description="A mobile application helps students improve their math skills by quizzes and exercises."
             skills= "React Native, JSON Server"
             github="https://github.com/lehuubao1810/QuizApp"
-            preview="https://expo.dev/artifacts/eas/envG2WyKpFTJZ5hEBA3U5v.apk"
+            // preview="https://expo.dev/artifacts/eas/envG2WyKpFTJZ5hEBA3U5v.apk"
+            preview="https://drive.google.com/file/d/1w_o6jFag7hOHpiWwKWTvRd0DmqnqmmD4/view?usp=share_link"
           />
           <CardProject 
             title="Project 3"
