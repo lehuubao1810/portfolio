@@ -7,6 +7,8 @@ function App() {
     alert('Downloading...');
   }
 
+
+
   const skills = [ 
     'ReactJS', 'HTML', 'CSS', 'JavaScript',
      'TypeScript', 'TailwindCSS', 'Sass',
@@ -51,19 +53,19 @@ function App() {
           <CardProject 
             title="MATH BIN"
             image="https://lehuubao1810.github.io/dataquiz/mathbin.png"
-            description="A mobile application helps students improve their math skills by quizzes and exercises."
+            description="A android application helps students improve their math skills by quizzes and exercises."
             skills= "React Native, JSON Server"
             github="https://github.com/lehuubao1810/QuizApp"
             // preview="https://expo.dev/artifacts/eas/envG2WyKpFTJZ5hEBA3U5v.apk"
             preview="https://drive.google.com/file/d/1w_o6jFag7hOHpiWwKWTvRd0DmqnqmmD4/view?usp=share_link"
           />
           <CardProject 
-            title="Project 3"
-            image="https://picsum.photos/500/300"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vitae ultricies ultricies, nisl nisl aliquam nisl, eget aliquam nisl nisl eu nisl."
+            title="Calculator App" 
+            image="https://raw.githubusercontent.com/lehuubao1810/Calculator-App/main/design/desktop-design-theme-1.jpg"
+            description=" A calculator app can perform basic arithmetic operations (add, subtract, multiply, divide) and have three themes."
             skills= "React, NodeJS, MongoDB"
-            github="https://github.com/lehuubao1810"
-            preview="#"
+            github="https://github.com/lehuubao1810/Calculator-App"
+            preview="https://lehuubao1810.github.io/Calculator-App/"
             type= "web"
           />
           <CardProject 
