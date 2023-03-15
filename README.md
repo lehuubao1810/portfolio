@@ -60,7 +60,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="https://raw.githubusercontent.com/lehuubao1810/Todo/dev/src/assets/1.png" alt="ToDo">
+<img src="https://raw.githubusercontent.com/lehuubao1810/portfolio/main/public/img/preview.png" alt="Portfolio">
 
 
 ### Built With
@@ -103,16 +103,16 @@ Project Link: [https://github.com/lehuubao1810/portfolio](https://github.com/leh
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/lehuubao1810/Todo.svg?style=for-the-badge
-[contributors-url]: https://github.com/lehuubao1810/Todo/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/lehuubao1810/Todo.svg?style=for-the-badge
-[forks-url]: https://github.com/lehuubao1810/Todo/network/members
-[stars-shield]: https://img.shields.io/github/stars/lehuubao1810/Todo.svg?style=for-the-badge
-[stars-url]: https://github.com/lehuubao1810/Todo/stargazers
-[issues-shield]: https://img.shields.io/github/issues/lehuubao1810/Todo.svg?style=for-the-badge
-[issues-url]: https://github.com/lehuubao1810/Todo/issues
-[license-shield]: https://img.shields.io/github/license/lehuubao1810/Todo.svg?style=for-the-badge
-[license-url]: https://github.com/lehuubao1810/Todo/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/lehuubao1810/portfolio.svg?style=for-the-badge
+[contributors-url]: https://github.com/lehuubao1810/portfolio/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/lehuubao1810/portfolio.svg?style=for-the-badge
+[forks-url]: https://github.com/lehuubao1810/portfolio/network/members
+[stars-shield]: https://img.shields.io/github/stars/lehuubao1810/portfolio.svg?style=for-the-badge
+[stars-url]: https://github.com/lehuubao1810/portfolio/stargazers
+[issues-shield]: https://img.shields.io/github/issues/lehuubao1810/portfolio.svg?style=for-the-badge
+[issues-url]: https://github.com/lehuubao1810/portfolio/issues
+[license-shield]: https://img.shields.io/github/license/lehuubao1810/portfolio.svg?style=for-the-badge
+[license-url]: https://github.com/lehuubao1810/portfolio/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/screenshot.png
