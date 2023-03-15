@@ -10,19 +10,19 @@ function App() {
   const projects = 
   [
     {
-        "title":"Project 1",
-        "image":"https://picsum.photos/500/300",
-        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vitae ultricies ultricies, nisl nisl aliquam nisl, eget aliquam nisl nisl eu nisl.",
-        "skills": "React, NodeJS, MongoDB",
-        "github":"https://github.com/lehuubao1810",
-        "preview":"#",
+        "title":"Todo App",
+        "image":"https://raw.githubusercontent.com/lehuubao1810/Todo/dev/src/assets/1.png",
+        "description":"A web application that allows users to create, edit, delete, and mark tasks as completed.",
+        "skills": "ReactJS, Firebase",
+        "github":"https://github.com/lehuubao1810/Todo",
+        "preview":"https://lhbtodo.vercel.app/",
         "type": "web"
     },
     {
         "title":"MATH BIN",
         "image":"https://lehuubao1810.github.io/dataquiz/mathbin.png",
         "description":"A mobile application helps students improve their math skills by quizzes and exercises.",
-        "skills": "React, NodeJS, MongoDB",
+        "skills": "React Native, JSON Server",
         "github":"https://github.com/lehuubao1810/QuizApp",
         "preview":"https://drive.google.com/file/d/1w_o6jFag7hOHpiWwKWTvRd0DmqnqmmD4/view?usp=share_link",
         "type": "mobile"
@@ -31,7 +31,7 @@ function App() {
         "title":"Calculator App",
         "image":"https://raw.githubusercontent.com/lehuubao1810/Calculator-App/main/design/desktop-design-theme-1.jpg",
         "description":"A calculator app can perform basic arithmetic operations (add, subtract, multiply, divide) and have three themes",
-        "skills": "React, NodeJS, MongoDB",
+        "skills": "JS",
         "github":"https://github.com/lehuubao1810/Calculator-App",
         "preview":"https://lehuubao1810.github.io/Calculator-App/",
         "type": "web"
@@ -40,7 +40,7 @@ function App() {
         "title":"Rest Countries API",
         "image":"https://raw.githubusercontent.com/lehuubao1810/countriesAPI/main/design/desktop-design-home-dark.jpg",
         "description":"A web application that allows users to search for countries using the REST Countries API and filter them by region.",
-        "skills": "React, Rest API",
+        "skills": "ReactJS, Rest API",
         "github":"https://github.com/lehuubao1810/countriesAPI",
         "preview":"https://lhbcountriesapi.vercel.app/",
         "type": "web"
@@ -48,10 +48,9 @@ function App() {
   ]
 
   const skills = [ 
-    'ReactJS', 'HTML', 'CSS', 'JavaScript',
-     'TypeScript', 'TailwindCSS', 'Sass/SCSS',
-    'React Native', 'Git', 'Redux', 'NextJS', 
-    'Rest API'
+    'ReactJS', 'HTML', 'CSS','JS', 'JavaScript',
+    'TailwindCSS', 'Sass/SCSS','React Native', 
+    'Git', 'Redux', 'Firebase','Rest API'
     ]
   return (
     <div className="App">
@@ -89,13 +88,16 @@ function App() {
         <hr className='line'></hr>
         <h1>About</h1>
         <div className="about">
-          <div className="about-left">
+          {/* <div className="about-left">
             <img src="https://picsum.photos/250/300" alt="avatar" />
           </div>
-          <div className="about-right">
+          <div className="about-right"> */}
             <h1>Le Huu Bao</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vitae ultricies ultricies, nisl nisl aliquam nisl, eget aliquam nisl nisl eu nisl. Sed euismod, nisl vitae ultricies ultricies, nisl nisl aliquam nisl, eget aliquam nisl nisl eu nisl.</p>
-          </div>
+            <p>
+              I'm a 3rd year student majoring in IT at HCMC University of Transport. I'm a passionate and hard-working person.
+              I'm always willing to learn new things and improve my skills.
+            </p>
+          {/* </div> */}
         </div>
       </section>
       <section id='skills'>
