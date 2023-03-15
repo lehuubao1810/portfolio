@@ -48,7 +48,7 @@ function App() {
     ]
 
   const skills = [
-    'ReactJS', 'HTML', 'CSS', 'JS', 'JavaScript',
+    'ReactJS', 'HTML', 'CSS', 'JavaScript',
     'TailwindCSS', 'Sass/SCSS', 'React Native',
     'Git', 'Redux', 'Firebase', 'Rest API'
   ]
