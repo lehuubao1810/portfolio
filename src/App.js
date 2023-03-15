@@ -4,7 +4,7 @@ import CardProject from './components/cardProject';
 function App() {
 
   const handleCV = () => {
-    alert('Downloading...');
+    window.open("https://github.com/lehuubao1810/portfolio/tree/main/public/CV/Le-Huu-Bao.pdf", "_blank");
   }
 
   const projects =
