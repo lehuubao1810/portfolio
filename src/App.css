@@ -196,6 +196,9 @@
 .contact-link p:hover {
   font-size: 28px;
 }
+.contact-link p a {
+  color: #fff;
+}
 
 /* Footer */
 .footer {

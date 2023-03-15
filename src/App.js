@@ -7,51 +7,51 @@ function App() {
     alert('Downloading...');
   }
 
-  const projects = 
-  [
-    {
-        "title":"Todo App",
-        "image":"https://raw.githubusercontent.com/lehuubao1810/Todo/dev/src/assets/1.png",
-        "description":"A web application that allows users to create, edit, delete, and mark tasks as completed.",
+  const projects =
+    [
+      {
+        "title": "Todo App",
+        "image": "https://raw.githubusercontent.com/lehuubao1810/Todo/dev/src/assets/1.png",
+        "description": "A web application that allows users to create, edit, delete, and mark tasks as completed.",
         "skills": "ReactJS, Firebase",
-        "github":"https://github.com/lehuubao1810/Todo",
-        "preview":"https://lhbtodo.vercel.app/",
+        "github": "https://github.com/lehuubao1810/Todo",
+        "preview": "https://lhbtodo.vercel.app/",
         "type": "web"
-    },
-    {
-        "title":"MATH BIN",
-        "image":"https://lehuubao1810.github.io/dataquiz/mathbin.png",
-        "description":"A mobile application helps students improve their math skills by quizzes and exercises.",
+      },
+      {
+        "title": "MATH BIN",
+        "image": "https://lehuubao1810.github.io/dataquiz/mathbin.png",
+        "description": "A mobile application helps students improve their math skills by quizzes and exercises.",
         "skills": "React Native, JSON Server",
-        "github":"https://github.com/lehuubao1810/QuizApp",
-        "preview":"https://drive.google.com/file/d/1w_o6jFag7hOHpiWwKWTvRd0DmqnqmmD4/view?usp=share_link",
+        "github": "https://github.com/lehuubao1810/QuizApp",
+        "preview": "https://drive.google.com/file/d/1w_o6jFag7hOHpiWwKWTvRd0DmqnqmmD4/view?usp=share_link",
         "type": "mobile"
-    },
-    {
-        "title":"Calculator App",
-        "image":"https://raw.githubusercontent.com/lehuubao1810/Calculator-App/main/design/desktop-design-theme-1.jpg",
-        "description":"A calculator app can perform basic arithmetic operations (add, subtract, multiply, divide) and have three themes",
+      },
+      {
+        "title": "Calculator App",
+        "image": "https://raw.githubusercontent.com/lehuubao1810/Calculator-App/main/design/desktop-design-theme-1.jpg",
+        "description": "A calculator app can perform basic arithmetic operations (add, subtract, multiply, divide) and have three themes",
         "skills": "JS",
-        "github":"https://github.com/lehuubao1810/Calculator-App",
-        "preview":"https://lehuubao1810.github.io/Calculator-App/",
+        "github": "https://github.com/lehuubao1810/Calculator-App",
+        "preview": "https://lehuubao1810.github.io/Calculator-App/",
         "type": "web"
-    },
-    {
-        "title":"Rest Countries API",
-        "image":"https://raw.githubusercontent.com/lehuubao1810/countriesAPI/main/design/desktop-design-home-dark.jpg",
-        "description":"A web application that allows users to search for countries using the REST Countries API and filter them by region.",
+      },
+      {
+        "title": "Rest Countries API",
+        "image": "https://raw.githubusercontent.com/lehuubao1810/countriesAPI/main/design/desktop-design-home-dark.jpg",
+        "description": "A web application that allows users to search for countries using the REST Countries API and filter them by region.",
         "skills": "ReactJS, Rest API",
-        "github":"https://github.com/lehuubao1810/countriesAPI",
-        "preview":"https://lhbcountriesapi.vercel.app/",
+        "github": "https://github.com/lehuubao1810/countriesAPI",
+        "preview": "https://lhbcountriesapi.vercel.app/",
         "type": "web"
-    }
-  ]
-
-  const skills = [ 
-    'ReactJS', 'HTML', 'CSS','JS', 'JavaScript',
-    'TailwindCSS', 'Sass/SCSS','React Native', 
-    'Git', 'Redux', 'Firebase','Rest API'
+      }
     ]
+
+  const skills = [
+    'ReactJS', 'HTML', 'CSS', 'JS', 'JavaScript',
+    'TailwindCSS', 'Sass/SCSS', 'React Native',
+    'Git', 'Redux', 'Firebase', 'Rest API'
+  ]
   return (
     <div className="App">
       <header className="App-header">
@@ -92,11 +92,11 @@ function App() {
             <img src="https://picsum.photos/250/300" alt="avatar" />
           </div>
           <div className="about-right"> */}
-            <h1>Le Huu Bao</h1>
-            <p>
-              I'm a 3rd year student majoring in IT at HCMC University of Transport. I'm a passionate and hard-working person.
-              I'm always willing to learn new things and improve my skills.
-            </p>
+          <h1>Le Huu Bao</h1>
+          <p>
+            I'm a 3rd year student majoring in IT at HCMC University of Transport. I'm a passionate and hard-working person.
+            I'm always willing to learn new things and improve my skills.
+          </p>
           {/* </div> */}
         </div>
       </section>
@@ -115,26 +115,23 @@ function App() {
         <hr className='line'></hr>
         <h1>Contact</h1>
         <div className="contact">
-            <h1>Le Huu Bao</h1>
-            <div className='contact-link'>
-              <p>
+          <h1>Le Huu Bao</h1>
+          <div className='contact-link'>
+            <p>
+              <a href="mailto:lehuubao2909@gmail.com">
                 <i className="fas fa-envelope"></i>
-                <span>
-                  <a href="mailto:lehuubao2909@gmail.com">
-                  </a>
-                </span>
-              </p>
-              <p>
+              </a>
+            </p>
+            <p>
+              <a href="https://github.com/lehuubao1810">
                 <i className="fab fa-github"></i>
-                <span>
-                  <a href="https://github.com/lehuubao1810"></a>
-                </span>
-              </p>
-            </div>
-            
+              </a>
+            </p>
+          </div>
+
         </div>
       </section>
-      
+
       <footer>
         <hr className='line'></hr>
         <p className='footer'>Create by LeHuuBao @2023</p>
