@@ -14,8 +14,8 @@ function App() {
         "image": "https://raw.githubusercontent.com/lehuubao1810/Todo/dev/src/assets/1.png",
         "description": "A web application that allows users to create, edit, delete, and mark tasks as completed.",
         "skills": "ReactJS, Firebase",
-        "github": "https://github.com/lehuubao1810/Todo",
-        "preview": "https://lhbtodo.vercel.app/",
+        "github": "https://github.com/lehuubao1810/todo_cdtt",
+        "preview": "https://todo-cdtt.vercel.app/",
         "type": "web"
       },
       {
@@ -26,6 +26,15 @@ function App() {
         "github": "https://github.com/lehuubao1810/QuizApp",
         "preview": "https://drive.google.com/file/d/1w_o6jFag7hOHpiWwKWTvRd0DmqnqmmD4/view?usp=share_link",
         "type": "mobile"
+      },
+      {
+        "title": "Shift Cipher",
+        "image": "https://raw.githubusercontent.com/lehuubao1810/shiftCipher/main/src/assets/1.png",
+        "description": "An app help user encrypt and decrypt text with shift cipher (ASCII code).",
+        "skills": "ReactJS",
+        "github": "https://github.com/lehuubao1810/shiftCipher",
+        "preview": "https://shiftcipher.vercel.app/",
+        "type": "web"
       },
       {
         "title": "Calculator App",
@@ -44,7 +53,8 @@ function App() {
         "github": "https://github.com/lehuubao1810/countriesAPI",
         "preview": "https://lhbcountriesapi.vercel.app/",
         "type": "web"
-      }
+      },
+      
     ]
 
   const skills = [
