@@ -18,8 +18,8 @@ const CardProject = (props) => {
                     }
                 </div>
                 <div className="card-project__links">
-                    <a href={props.project.github}><i className="fa-brands fa-github"></i></a>
-                    <a href={props.project.preview}>
+                    <a href={props.project.github} target="_blank"><i className="fa-brands fa-github"></i></a>
+                    <a href={props.project.preview} target="_blank">
                         {
                             isWeb ?
                             <i className="fa-solid fa-up-right-from-square"></i> :

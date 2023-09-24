@@ -128,12 +128,12 @@ function App() {
           <h1>Le Huu Bao</h1>
           <div className='contact-link'>
             <p>
-              <a href="mailto:lehuubao2909@gmail.com">
+              <a href="mailto:lehuubao2909@gmail.com" target="_blank">
                 <i className="fas fa-envelope"></i>
               </a>
             </p>
             <p>
-              <a href="https://github.com/lehuubao1810">
+              <a href="https://github.com/lehuubao1810" target="_blank">
                 <i className="fab fa-github"></i>
               </a>
             </p>
