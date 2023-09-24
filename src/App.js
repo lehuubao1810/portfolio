@@ -82,7 +82,7 @@ function App() {
       </header>
       <section id='top'>
         <h1>Hi, I'm Le Huu Bao</h1>
-        <h4>3rd year student majoring in IT<br></br>HCMC University of Transport</h4>
+        <h4>4th year student majoring in IT<br></br>HCMC University of Transport</h4>
         <button onClick={handleCV} className="cv">My CV</button>
       </section>
       <section id='projects' >
@@ -104,7 +104,7 @@ function App() {
           <div className="about-right"> */}
           <h1>Le Huu Bao</h1>
           <p>
-            I'm a 3rd year student majoring in IT at HCMC University of Transport. I'm a passionate and hard-working person.
+            I'm a 4th year student majoring in IT at HCMC University of Transport. I'm a passionate and hard-working person.
             I'm always willing to learn new things and improve my skills.
           </p>
           {/* </div> */}
