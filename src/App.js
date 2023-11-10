@@ -28,6 +28,15 @@ function App() {
         "type": "mobile"
       },
       {
+        "title": "Chat App",
+        "image": "https://raw.githubusercontent.com/lehuubao1810/portfolio/main/public/img/chatapp.png",
+        "description": "A web application that allows users chat with each other.",
+        "skills": "ReactJS, Firebase",
+        "github": "https://github.com/joi-lightyears/chatReactFirebase",
+        "preview": "https://pdbbchat.vercel.app/",
+        "type": "web"
+      },
+      {
         "title": "Shift Cipher",
         "image": "https://raw.githubusercontent.com/lehuubao1810/shiftCipher/main/src/assets/1.png",
         "description": "An app help user encrypt and decrypt text with shift cipher (ASCII code).",
@@ -60,7 +69,8 @@ function App() {
   const skills = [
     'ReactJS', 'HTML', 'CSS', 'JavaScript',
     'TailwindCSS', 'Sass/SCSS', 'React Native',
-    'Git', 'Redux', 'Firebase', 'Rest API'
+    'Git', 'Redux', 'Firebase', 'Rest API', 'NodeJS',
+    'ExpressJS', 'MongoDB'
   ]
   return (
     <div className="App">
