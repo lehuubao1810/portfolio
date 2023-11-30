@@ -10,6 +10,15 @@ function App() {
   const projects =
     [
       {
+        "title": "Shop BB",
+        "image": "https://raw.githubusercontent.com/lehuubao1810/portfolio/main/public/img/shopbb.png",
+        "description": "A web E-commerce built by the MERN stack.",
+        "skills": "ReactJS, NodeJS, ExpressJS, MongoDB, MUI",
+        "github": "https://github.com/lehuubao1810/shopBB",
+        "preview": "https://shop-bb.vercel.app/",
+        "type": "web"
+      },
+      {
         "title": "Todo App",
         "image": "https://raw.githubusercontent.com/lehuubao1810/Todo/dev/src/assets/1.png",
         "description": "A web application that allows users to create, edit, delete, and mark tasks as completed.",
