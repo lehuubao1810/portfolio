@@ -19,6 +19,15 @@ function App() {
         "type": "web"
       },
       {
+        "title": "Chat App",
+        "image": "https://raw.githubusercontent.com/lehuubao1810/portfolio/main/public/img/chatapp.png",
+        "description": "A web application that allows users chat with each other and can translate the message.",
+        "skills": "ReactJS, Firebase",
+        "github": "https://github.com/joi-lightyears/chatReactFirebase",
+        "preview": "https://pdbbchat.vercel.app/",
+        "type": "web"
+      },
+      {
         "title": "Todo App",
         "image": "https://raw.githubusercontent.com/lehuubao1810/Todo/dev/src/assets/1.png",
         "description": "A web application that allows users to create, edit, delete, and mark tasks as completed.",
@@ -35,15 +44,6 @@ function App() {
         "github": "https://github.com/lehuubao1810/QuizApp",
         "preview": "https://drive.google.com/file/d/1w_o6jFag7hOHpiWwKWTvRd0DmqnqmmD4/view?usp=share_link",
         "type": "mobile"
-      },
-      {
-        "title": "Chat App",
-        "image": "https://raw.githubusercontent.com/lehuubao1810/portfolio/main/public/img/chatapp.png",
-        "description": "A web application that allows users chat with each other.",
-        "skills": "ReactJS, Firebase",
-        "github": "https://github.com/joi-lightyears/chatReactFirebase",
-        "preview": "https://pdbbchat.vercel.app/",
-        "type": "web"
       },
       {
         "title": "Shift Cipher",
