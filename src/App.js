@@ -19,6 +19,15 @@ function App() {
         "type": "web"
       },
       {
+        "title": "UrFeeds",
+        "image": "https://raw.githubusercontent.com/lehuubao1810/portfolio/main/public/img/urfeeds.png",
+        "description": "A web to manage feeds and read posts.",
+        "skills": "ReactJS, TypeScript, Redux, Firebase, TailwindCSS",
+        "github": "https://github.com/lehuubao1810/UrFeeds",
+        "preview": "https://urfeeds.vercel.app/",
+        "type": "web"
+      },
+      {
         "title": "Chat App",
         "image": "https://raw.githubusercontent.com/lehuubao1810/portfolio/main/public/img/chatapp.png",
         "description": "A web application that allows users chat with each other and can translate the message.",
