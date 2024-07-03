@@ -1,44 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap");
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Fredoka', sans-serif;
+  font-family: "Fredoka", sans-serif;
+  scroll-behavior: smooth !important;
 }
 
 .App {
   width: 100%;
   text-align: center;
   background: #23283e;
-  padding-top: 20px;
   color: #fff;
 }
 
+.App-header {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+.blurBox {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  padding-top: 16px;
+}
 .nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 100px;
+  height: 80px;
   width: 80%;
   background: #2a2f4c;
   list-style: none;
-  margin: 0 auto 50px;
+  margin: 0 auto;
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
 }
 
 .nav-link {
   color: #fff;
-  text-decoration: none;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 .nav-link:hover {
-  font-size: 26px;
+  transform: scale(1.1);
 }
+.nav-link .active {
+  color: #fff;
+  transform: scale(1.1);
+}
+
 #top {
-  padding-top: 60px ;
+  padding-top: 160px;
   padding-bottom: 160px;
 }
 #top h1 {
@@ -60,6 +76,7 @@
   font-size: 16px;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
+  border-radius: 5px;
 }
 .cv:hover {
   background-color: #32385a;
@@ -119,7 +136,7 @@
 .card-project__links a {
   color: #fff;
   text-decoration: none;
-} 
+}
 .card-project__links a i {
   font-size: 24px;
   padding: 0 20px;
@@ -137,7 +154,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px
+  gap: 20px;
 }
 .about-left {
   padding-left: 50px;
@@ -162,8 +179,8 @@
   box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.4);
   color: #fff;
   font-size: 16px;
-  cursor: pointer;
   transition: all 0.1s ease-in-out;
+  border-radius: 5px;
 }
 .skill:hover {
   background-color: #32385a;
@@ -206,7 +223,32 @@
   padding-bottom: 60px;
 }
 
+/* Btn to top */
+.btn-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #2a2f4c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.btn-to-top:hover {
+  background: #32385a;
+  transform: scale(1.1);
+}
+
 @media only screen and (max-width: 600px) {
+  .App-header {
+    position: relative;
+  }
+  .blurBox {
+    display: none;
+  }
   .nav {
     height: 50px;
     width: 80%;
@@ -220,7 +262,7 @@
   }
 
   #top {
-    padding-top: 50px ;
+    padding-top: 50px;
     padding-bottom: 120px;
   }
   #top h1 {
@@ -281,7 +323,7 @@
   .card-project__links a {
     color: #fff;
     text-decoration: none;
-  } 
+  }
   .card-project__links a i {
     font-size: 20px;
     padding: 0 15px;
