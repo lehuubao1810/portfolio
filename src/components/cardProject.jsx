@@ -1,4 +1,4 @@
-const CardProject = (props) => {
+export const CardProject = (props) => {
   const skills = props.project.skills.split(", ");
   const isWeb = props.project.type === "web";
   return (
@@ -34,5 +34,3 @@ const CardProject = (props) => {
     </div>
   );
 };
-
-export default CardProject;

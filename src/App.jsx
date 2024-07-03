@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import "./App.css";
-import CardProject from "./components/CardProject";
 import BtnToTop from "./components/BtnToTop";
+import { CardProject } from "./components/cardProject";
 
 function App() {
   const handleCV = () => {
