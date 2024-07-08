@@ -9,6 +9,29 @@
   scroll-behavior: smooth !important;
 }
 
+/* SCROLL BAR */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #1c1b22;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #01fd9c;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  opacity: 0.8;
+}
+
+/* APP */
 .App {
   width: 100%;
   text-align: center;
@@ -244,7 +267,7 @@
 .contact {
   width: 80%;
   margin: 0 auto;
-  padding: 50px;
+  padding: 25px 50px;
 }
 .contact h1 {
   font-size: 40px;
@@ -272,6 +295,45 @@
   color: #fff;
 }
 
+/* form contact */
+.formContact__group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  gap: 10px;
+  text-align: left;
+}
+.formContact__group label {
+  color: #01fd9c;
+}
+.formContact__group input,
+.formContact__group textarea {
+  padding: 10px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  background: #21272f;
+  color: #fff;
+  outline: none;
+}
+.formContact__group input:focus,
+.formContact__group textarea:focus {
+  border: 2px solid #01fd9c;
+}
+.formContact button {
+  padding: 10px 25px;
+  border: none;
+  background: #01fd9c;
+  color: #21272f;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 16px;
+}
+.formContact button:hover {
+  box-shadow: 0 0 9px #01fd9c81;
+}
+
 /* Footer */
 .footer {
   padding-top: 25px;
@@ -293,8 +355,9 @@
   transition: all 0.2s ease-in-out;
 }
 .btn-to-top:hover {
-  background: #32385a;
+  background: #01fd9c;
   transform: scale(1.1);
+  color: #21272f;
 }
 
 @media only screen and (max-width: 600px) {

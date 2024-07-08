@@ -2,6 +2,10 @@ import { useRef, useState } from "react";
 import "./App.css";
 import BtnToTop from "./components/BtnToTop";
 import { CardProjectItem } from "./components/CardProjectItem";
+import { projects } from "./data/projects";
+import { experiences } from "./data/experiences";
+import { skills } from "./data/skills";
+import { FormContact } from "./components/FormContact";
 
 function App() {
   const handleCV = () => {
@@ -11,140 +15,11 @@ function App() {
     );
   };
 
-  const projects = [
-    {
-      title: "Shop BB",
-      image:
-        "https://raw.githubusercontent.com/lehuubao1810/portfolio/main/public/img/shopbb.png",
-      description: "A web E-commerce built by the MERN stack.",
-      skills: "ReactJS, NodeJS, ExpressJS, MongoDB, MUI",
-      github: "https://github.com/lehuubao1810/shopBB",
-      preview: "https://shop-bb.vercel.app/",
-      type: "web",
-    },
-    {
-      title: "UrFeeds",
-      image:
-        "https://raw.githubusercontent.com/lehuubao1810/portfolio/main/public/img/urfeeds.png",
-      description: "A web to manage feeds and read posts.",
-      skills: "ReactJS, TypeScript, Redux, Firebase, TailwindCSS",
-      github: "https://github.com/lehuubao1810/UrFeeds",
-      preview: "https://urfeeds.vercel.app/",
-      type: "web",
-    },
-    {
-      title: "Chat App",
-      image:
-        "https://raw.githubusercontent.com/lehuubao1810/portfolio/main/public/img/chatapp.png",
-      description:
-        "A web application that allows users chat with each other and can translate the message.",
-      skills: "ReactJS, Firebase",
-      github: "https://github.com/joi-lightyears/chatReactFirebase",
-      preview: "https://pdbbchat.vercel.app/",
-      type: "web",
-    },
-    {
-      title: "Todo App",
-      image:
-        "https://raw.githubusercontent.com/lehuubao1810/Todo/dev/src/assets/1.png",
-      description:
-        "A web application that allows users to create, edit, delete, and mark tasks as completed.",
-      skills: "ReactJS, Firebase",
-      github: "https://github.com/lehuubao1810/todo_cdtt",
-      preview: "https://todo-cdtt.vercel.app/",
-      type: "web",
-    },
-    {
-      title: "MATH BIN",
-      image: "https://lehuubao1810.github.io/dataquiz/mathbin.png",
-      description:
-        "A mobile application helps students improve their math skills by quizzes and exercises.",
-      skills: "React Native, JSON Server",
-      github: "https://github.com/lehuubao1810/QuizApp",
-      preview:
-        "https://drive.google.com/file/d/1w_o6jFag7hOHpiWwKWTvRd0DmqnqmmD4/view?usp=share_link",
-      type: "mobile",
-    },
-    {
-      title: "Shift Cipher",
-      image:
-        "https://raw.githubusercontent.com/lehuubao1810/shiftCipher/main/src/assets/1.png",
-      description:
-        "An app help user encrypt and decrypt text with shift cipher (ASCII code).",
-      skills: "ReactJS",
-      github: "https://github.com/lehuubao1810/shiftCipher",
-      preview: "https://shiftcipher.vercel.app/",
-      type: "web",
-    },
-    {
-      title: "Calculator App",
-      image:
-        "https://raw.githubusercontent.com/lehuubao1810/Calculator-App/main/design/desktop-design-theme-1.jpg",
-      description:
-        "A calculator app can perform basic arithmetic operations (add, subtract, multiply, divide) and have three themes",
-      skills: "JS",
-      github: "https://github.com/lehuubao1810/Calculator-App",
-      preview: "https://lehuubao1810.github.io/Calculator-App/",
-      type: "web",
-    },
-    {
-      title: "Rest Countries API",
-      image:
-        "https://raw.githubusercontent.com/lehuubao1810/countriesAPI/main/design/desktop-design-home-dark.jpg",
-      description:
-        "A web application that allows users to search for countries using the REST Countries API and filter them by region.",
-      skills: "ReactJS, Rest API",
-      github: "https://github.com/lehuubao1810/countriesAPI",
-      preview: "https://lhbcountriesapi.vercel.app/",
-      type: "web",
-    },
-  ];
-
-  const skills = [
-    "HTML",
-    "CSS",
-    "Sass/SCSS",
-    "TailwindCSS",
-    "JavaScript",
-    "TypeScript",
-    "ReactJS",
-    "React Native",
-    "Git",
-    "Redux",
-    "Firebase",
-    "NodeJS",
-    "ExpressJS",
-    "MongoDB",
-  ];
-
   const navLinks = [
     { name: "Projects", href: "projects" },
     { name: "Experience", href: "experience" },
     { name: "Skills", href: "skills" },
     { name: "Contact", href: "contact" },
-  ];
-
-  const experiences = [
-    {
-      title: "React Native Intern",
-      company: "SGOD",
-      time: "Apr 2024 - Jun 2024",
-      description: [
-        "Participated in the development of an E-Learning app.",
-        "Designed UI, developed, programmed, and debugged on both Android and iOS.",
-        "Worked closely with Backend team to design APIs and optimize the application.",
-      ],
-    },
-    {
-      title: "FrontEnd Intern",
-      company: "DHSOFT",
-      time: "Dec 2023 - Mar 2024",
-      description: [
-        "Utilized assigned frontend tasks to enhance user interface and experience.",
-        "Developed and implemented various functionalities for an ERP application.",
-        "Troubleshooted and resolved bugs within the website.",
-      ],
-    },
   ];
 
   const [activeLink, setActiveLink] = useState("");
@@ -197,7 +72,7 @@ function App() {
       </section>
       <section id="projects">
         <div className="line"></div>
-        <h1>Projects</h1>
+        <h1>{"</projects>"}</h1>
         <div className="cards">
           {projects.map((project, index) => (
             <CardProjectItem key={index} project={project} />
@@ -206,7 +81,7 @@ function App() {
       </section>
       <section id="experience">
         <div className="line"></div>
-        <h1>Experience</h1>
+        <h1>{"</experience>"}</h1>
         <div className="experience">
           <div className="tabs">
             {experiences.map((experience, index) => (
@@ -237,7 +112,7 @@ function App() {
       </section>
       <section id="skills">
         <div className="line"></div>
-        <h1>Skills</h1>
+        <h1>{"</skills>"}</h1>
         <div className="skills">
           {skills.map((skill, index) => (
             <div className="skill" key={index}>
@@ -248,7 +123,7 @@ function App() {
       </section>
       <section id="contact">
         <div className="line"></div>
-        <h1>Contact</h1>
+        <h1>{"</contact>"}</h1>
         <div className="contact">
           <h1>Le Huu Bao</h1>
           <div className="contact-link">
@@ -271,6 +146,7 @@ function App() {
               </a>
             </p>
           </div>
+          <FormContact />
         </div>
       </section>
 
