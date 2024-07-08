@@ -361,22 +361,16 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .App-header {
-    position: relative;
-  }
-  .blurBox {
-    display: none;
-  }
   .nav {
     height: 50px;
-    width: 80%;
+    width: 90%;
     margin: 0 auto 50px;
     box-shadow: none;
     background: #23283e;
   }
 
   .nav-link {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   #top {
