@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import "./App.css";
 import BtnToTop from "./components/BtnToTop";
-import { CardProject } from "./components/CardProject";
+import { CardProjectItem } from "./components/CardProjectItem";
 
 function App() {
   const handleCV = () => {
@@ -200,7 +200,7 @@ function App() {
         <h1>Projects</h1>
         <div className="cards">
           {projects.map((project, index) => (
-            <CardProject key={index} project={project} />
+            <CardProjectItem key={index} project={project} />
           ))}
         </div>
       </section>
