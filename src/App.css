@@ -1,17 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Fredoka", sans-serif;
+  font-family: "Kode Mono", monospace;
   scroll-behavior: smooth !important;
 }
 
 .App {
   width: 100%;
   text-align: center;
-  background: #23283e;
+  background: #1c1b22;
   color: #fff;
 }
 
@@ -31,32 +32,50 @@
   align-items: center;
   height: 80px;
   width: 80%;
-  background: #2a2f4c;
+  background: #21272f;
   list-style: none;
   margin: 0 auto;
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .nav-link {
+  position: relative;
   color: #fff;
   font-size: 20px;
   font-weight: 600;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
-.nav-link:hover {
-  transform: scale(1.1);
+.underline {
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background: #fff;
+  bottom: -5px;
+  left: 0;
+  transition: all 0.2s ease-in-out;
+  border-radius: 5px;
 }
-.nav-link .active {
-  color: #fff;
-  transform: scale(1.1);
+.nav-link:hover .underline {
+  width: 80%;
+}
+.nav .active {
+  color: #01fd9c;
+}
+.nav .active .underline {
+  width: 80%;
+  background-color: #01fd9c;
 }
 
 #top {
-  padding-top: 160px;
-  padding-bottom: 160px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
+
 #top h1 {
   font-size: 80px;
   font-weight: 600;
@@ -69,29 +88,28 @@
 }
 .cv {
   padding: 20px 40px;
-  background-color: #2a2f4c;
-  border: none;
-  box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.4);
-  color: #fff;
+  border: 1px solid #01fd9c;
+  color: #01fd9c;
+  background-color: transparent;
   font-size: 16px;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
   border-radius: 5px;
+  font-weight: bold;
 }
 .cv:hover {
-  background-color: #32385a;
-}
-.cv:active {
-  background-color: #2a2f4c;
-  box-shadow: 0 5px rgba(0, 0, 0, 0.2);
-  transform: translateY(4px);
+  background-color: #01fd9c;
+  color: #21272f;
+
+  /* lightning effect */
+  /* box-shadow: 0 0 20px #01fd9c;  */
 }
 
 .line {
   width: 80%;
   margin: 10px auto;
-  height: 1px;
-  background-color: #fff;
+  height: 2px;
+  background-color: #01fd9c;
   margin-bottom: 50px;
 }
 /* Card Project*/
@@ -104,34 +122,42 @@
   grid-gap: 50px;
 }
 .card-project {
-  background: #2a2f4c;
+  background: #21272f;
   padding-bottom: 40px;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
 .card-project:hover {
-  background: #32385a;
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 .card-project__image img {
   width: 100%;
   height: 300px;
   object-fit: cover;
-  border-radius: 10px 10px 0 0;
+  border-radius: 5px 5px 0 0;
+}
+
+.card-project__content {
+  padding: 0 20px;
 }
 .card-project__title {
   padding: 20px;
-}
-.card-project__description {
-  padding: 0 20px;
+  color: #01fd9c;
 }
 .card-project__skills {
   margin: 25px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 .card-project__skill {
-  padding: 0 10px;
+  padding: 5px 15px;
+  border: 1px solid #01fd9c;
+  border-radius: 5px;
+  color: #01fd9c;
 }
 .card-project__links a {
   color: #fff;
@@ -142,25 +168,53 @@
   padding: 0 20px;
   transition: all 0.2s ease-in-out;
 }
-.card-project__links a i:hover {
-  transform: scale(1.2);
+.card-project__links a:hover {
+  color: #01fd9c;
 }
-/* About */
+/* Experience */
 
-.about {
+.experience {
   width: 80%;
   margin: 0 auto;
-  padding: 50px 300px;
+  padding: 50px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 20px;
+  justify-content: space-between;
 }
-.about-left {
-  padding-left: 50px;
+.experience .tab {
+  width: 100%;
+  padding: 16px 24px;
+  border: 2px solid #01fd9c;
+  color: #01fd9c;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
-.about-right {
-  padding: 0 100px;
+.experience .tab:hover {
+  box-shadow: 0 0 9px #01fd9c81;
+}
+.experience .active {
+  background: #01fd9c;
+  color: #21272f;
+}
+.experience .tab-content {
+  background: #21272f;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: left;
+  width: 75%;
+}
+.experience .tab-content h2 {
+  color: #01fd9c;
+  margin-bottom: 20px;
+}
+.experience .tab-content ul {
+  list-style: none;
+  padding-left: 10px;
+}
+.experience .tab-content li {
+  margin-bottom: 10px;
 }
 
 /* Skills */
@@ -174,16 +228,15 @@
   display: inline-block;
   margin: 10px;
   padding: 20px 40px;
-  background-color: #2a2f4c;
+  background-color: #21272f;
   border: none;
   box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.4);
-  color: #fff;
+  color: #01fd9c;
   font-size: 16px;
   transition: all 0.1s ease-in-out;
   border-radius: 5px;
 }
 .skill:hover {
-  background-color: #32385a;
   transform: scale(1.05);
 }
 
@@ -207,11 +260,13 @@
 .contact-link p {
   margin: 10px 20px;
   font-size: 24px;
-  transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
-.contact-link p:hover {
-  font-size: 28px;
+.contact-link a {
+  transition: all 0.2s ease-in-out;
+}
+.contact-link p:hover a {
+  color: #01fd9c;
 }
 .contact-link p a {
   color: #fff;
@@ -228,7 +283,7 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #2a2f4c;
+  background: #21272f;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -296,7 +351,7 @@
     grid-gap: 50px;
   }
   .card-project {
-    background: #2a2f4c;
+    background: #21272f;
     padding-bottom: 40px;
     border-radius: 10px;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
@@ -359,10 +414,10 @@
     display: inline-block;
     margin: 10px;
     padding: 15px 25px;
-    background-color: #2a2f4c;
+    background-color: #21272f;
     border: none;
     box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.4);
-    color: #fff;
+    color: #01fd9c;
     font-size: 14px;
   }
 

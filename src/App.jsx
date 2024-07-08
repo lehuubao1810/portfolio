@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import "./App.css";
 import BtnToTop from "./components/BtnToTop";
-import { CardProject } from "./components/cardProject";
+import { CardProject } from "./components/CardProject";
 
 function App() {
   const handleCV = () => {
@@ -119,12 +119,37 @@ function App() {
 
   const navLinks = [
     { name: "Projects", href: "projects" },
-    { name: "About", href: "about" },
+    { name: "Experience", href: "experience" },
     { name: "Skills", href: "skills" },
     { name: "Contact", href: "contact" },
   ];
 
+  const experiences = [
+    {
+      title: "React Native Intern",
+      company: "SGOD",
+      time: "Apr 2024 - Jun 2024",
+      description: [
+        "Participated in the development of an E-Learning app.",
+        "Designed UI, developed, programmed, and debugged on both Android and iOS.",
+        "Worked closely with Backend team to design APIs and optimize the application.",
+      ],
+    },
+    {
+      title: "FrontEnd Intern",
+      company: "DHSOFT",
+      time: "Dec 2023 - Mar 2024",
+      description: [
+        "Utilized assigned frontend tasks to enhance user interface and experience.",
+        "Developed and implemented various functionalities for an ERP application.",
+        "Troubleshooted and resolved bugs within the website.",
+      ],
+    },
+  ];
+
   const [activeLink, setActiveLink] = useState("");
+
+  const [tabExperience, setTabExperience] = useState(experiences[0]);
 
   const appRef = useRef(null);
 
@@ -153,22 +178,25 @@ function App() {
                 }`}
               >
                 {navLink.name}
+                <div className="underline"></div>
               </li>
             ))}
           </ul>
         </div>
       </header>
       <section id="top">
-        <h1>Hi, I'm Le Huu Bao</h1>
         <h4>
-          4th year student majoring in IT<br></br>HCMC University of Transport
+          <i className="fas fa-code"></i> Software Developer
         </h4>
+        <h1>
+          Hi, <span style={{ color: "#01fd9c" }}>I'm Le Huu Bao</span>
+        </h1>
         <button onClick={handleCV} className="cv">
           My CV
         </button>
       </section>
       <section id="projects">
-        <hr className="line"></hr>
+        <div className="line"></div>
         <h1>Projects</h1>
         <div className="cards">
           {projects.map((project, index) => (
@@ -176,25 +204,39 @@ function App() {
           ))}
         </div>
       </section>
-      <section id="about">
-        <hr className="line"></hr>
-        <h1>About</h1>
-        <div className="about">
-          {/* <div className="about-left">
-            <img src="https://picsum.photos/250/300" alt="avatar" />
+      <section id="experience">
+        <div className="line"></div>
+        <h1>Experience</h1>
+        <div className="experience">
+          <div className="tabs">
+            {experiences.map((experience, index) => (
+              <div
+                key={index}
+                onClick={() => setTabExperience(experience)}
+                className={`tab ${
+                  tabExperience.company === experience.company ? "active" : ""
+                }`}
+              >
+                <h3>{experience.company}</h3>
+                <p>{experience.time}</p>
+              </div>
+            ))}
           </div>
-          <div className="about-right"> */}
-          <h1>Le Huu Bao</h1>
-          <p>
-            I'm a 4th year student majoring in IT at HCMC University of
-            Transport. I'm a passionate and hard-working person. I'm always
-            willing to learn new things and improve my skills.
-          </p>
-          {/* </div> */}
+          <div className="tab-content">
+            <h2>{tabExperience.title}</h2>
+            <ul>
+              {tabExperience.description.map((desc, index) => (
+                <li key={index}>
+                  <span style={{ color: "#01fd9c" }}>- </span>
+                  {desc}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
       <section id="skills">
-        <hr className="line"></hr>
+        <div className="line"></div>
         <h1>Skills</h1>
         <div className="skills">
           {skills.map((skill, index) => (
@@ -205,7 +247,7 @@ function App() {
         </div>
       </section>
       <section id="contact">
-        <hr className="line"></hr>
+        <div className="line"></div>
         <h1>Contact</h1>
         <div className="contact">
           <h1>Le Huu Bao</h1>
@@ -233,7 +275,7 @@ function App() {
       </section>
 
       <footer>
-        <hr className="line"></hr>
+        <div className="line"></div>
         <p className="footer">Create by LeHuuBao @2023</p>
       </footer>
 
