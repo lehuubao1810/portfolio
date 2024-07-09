@@ -334,6 +334,17 @@
   box-shadow: 0 0 9px #01fd9c81;
 }
 
+/* toast */
+.toast {
+  padding: 15px 20px;
+  background: #01fd9c;
+  color: #21272f; 
+  display: flex;
+  gap: 10px;
+  border-radius: 5px;
+}
+
+
 /* Footer */
 .footer {
   padding-top: 25px;
