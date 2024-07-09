@@ -356,8 +356,8 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #21272f;
-  color: #fff;
+  background: #01fd9c;
+  color: #21272f;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -366,9 +366,8 @@
   transition: all 0.2s ease-in-out;
 }
 .btn-to-top:hover {
-  background: #01fd9c;
   transform: scale(1.1);
-  color: #21272f;
+  box-shadow: 0 0 9px #01fd9c81;
 }
 
 @media only screen and (max-width: 600px) {
