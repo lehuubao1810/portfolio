@@ -7,13 +7,14 @@ import { experiences } from "./data/experiences";
 import { skills } from "./data/skills";
 import { FormContact } from "./components/FormContact";
 import { Toaster } from "react-hot-toast";
+import pdf from "./assets/CV/LeHuuBao_CV.pdf";
+import { DisplayPDF } from "./components/DisplayPDF";
 
 function App() {
+  const [isShowCV, setIsShowCV] = useState(false);
+
   const handleCV = () => {
-    window.open(
-      "https://github.com/lehuubao1810/portfolio/tree/main/public/CV/LeHuuBao_CV.pdf",
-      "_blank"
-    );
+    setIsShowCV(!isShowCV);
   };
 
   const navLinks = [
@@ -59,6 +60,7 @@ function App() {
   return (
     <>
       <Toaster position="bottom-left" reverseOrder={true} />
+      {isShowCV && <DisplayPDF pdf={pdf} setIsShowCV={setIsShowCV} />}
       <div className="App" ref={appRef}>
         <header className="App-header">
           <div className="blurBox">
