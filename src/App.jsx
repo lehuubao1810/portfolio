@@ -14,7 +14,18 @@ function App() {
   const [isShowCV, setIsShowCV] = useState(false);
 
   const handleCV = () => {
-    setIsShowCV(!isShowCV);
+    // check if user is on mobile
+    if (
+      navigator.userAgent.match(/Android/i) ||
+      navigator.userAgent.match(/iPhone/i)
+    ) {
+      window.open(
+        "https://github.com/lehuubao1810/portfolio/blob/main/public/CV/LeHuuBao_CV.pdf",
+        "_blank"
+      );
+    } else {
+      setIsShowCV(!isShowCV);
+    }
   };
 
   const navLinks = [
