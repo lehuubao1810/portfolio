@@ -27,7 +27,7 @@ export const projects = [
       "https://raw.githubusercontent.com/lehuubao1810/portfolio/main/public/img/client_vocab.png",
     description: "A web to learn vocab English, support AI to practice.",
     skills:
-      "ReactJS, NextJS, MUI, Gemini, NodeJS, ExpressJS, MongoDB, TypeScript, Redux, Firebase, Tailwind",
+      "ReactJS, NextJS, MUI, GeminiAPI, NodeJS, ExpressJS, MongoDB, TypeScript, Redux, Firebase, Tailwind",
     github: "https://github.com/lehuubao1810/VocabTutorAI",
     preview: "https://vocabtutor.vercel.app/",
     type: "web",
