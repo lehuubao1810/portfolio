@@ -13,10 +13,23 @@ export const projects = [
     title: "E-Learning App",
     image:
       "https://raw.githubusercontent.com/lehuubao1810/portfolio/main/public/img/elearning.png",
-    description: "An e-learning app with features for enhanced learning experiences",
+    description:
+      "An e-learning app with features for enhanced learning experiences",
     skills: "React Native, TypeScript, Redux, Tailwind",
     github: "https://github.com/lehuubao1810/quizMobile",
-    preview: "https://www.canva.com/design/DAGJV3mKt24/VtBG8oe1gMUY7TC4Bw5IAA/view?utm_content=DAGJV3mKt24&utm_campaign=designshare&utm_medium=link&utm_source=editor",
+    preview:
+      "https://www.canva.com/design/DAGJV3mKt24/VtBG8oe1gMUY7TC4Bw5IAA/view?utm_content=DAGJV3mKt24&utm_campaign=designshare&utm_medium=link&utm_source=editor",
+    type: "web",
+  },
+  {
+    title: "VocabTutor",
+    image:
+      "https://raw.githubusercontent.com/lehuubao1810/portfolio/main/public/img/client_vocab.png",
+    description: "A web to learn vocab English, support AI to practice.",
+    skills:
+      "ReactJS, NextJS, MUI, Gemini, NodeJS, ExpressJS, MongoDB, TypeScript, Redux, Firebase, Tailwind",
+    github: "https://github.com/lehuubao1810/VocabTutorAI",
+    preview: "https://vocabtutor.vercel.app/",
     type: "web",
   },
   {
