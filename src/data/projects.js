@@ -22,6 +22,17 @@ export const projects = [
     type: "web",
   },
   {
+    title: "ListenWise",
+    image:
+      "https://raw.githubusercontent.com/lehuubao1810/portfolio/main/public/img/listenwise.png",
+    description:
+      "Practice English listening skills through dictation with AI transcriptions.",
+    skills: "Next.js, FastAPI, TailwindCSS, Whisper, TypeScript",
+    github: "https://github.com/lehuubao1810/listenwise",
+    preview: "https://listenwise.vercel.app/",
+    type: "web",
+  },
+  {
     title: "VocabTutor",
     image:
       "https://raw.githubusercontent.com/lehuubao1810/portfolio/main/public/img/client_vocab.png",
