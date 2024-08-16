@@ -7,7 +7,7 @@ import { experiences } from "./data/experiences";
 import { skills } from "./data/skills";
 import { FormContact } from "./components/FormContact";
 import { Toaster } from "react-hot-toast";
-import pdf from "./assets/CV/LeHuuBao_CV.pdf";
+import pdf from "./assets/CV/LeHuuBao_Frontend_CV.pdf";
 import { DisplayPDF } from "./components/DisplayPDF";
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
       navigator.userAgent.match(/iPhone/i)
     ) {
       window.open(
-        "https://github.com/lehuubao1810/portfolio/blob/main/public/CV/LeHuuBao_CV.pdf",
+        "https://github.com/lehuubao1810/portfolio/blob/main/public/CV/LeHuuBao_Frontend_CV.pdf",
         "_blank"
       );
     } else {

@@ -19,9 +19,9 @@ export const CardProjectItem = (props) => {
             })}
           </div>
           <div className="card-project__links">
-            <a href={props.project.github} target="_blank" rel="noreferrer">
+            {!props.project.github === "" && <a href={props.project.github} target="_blank" rel="noreferrer">
               <i className="fa-brands fa-github"></i>
-            </a>
+            </a>}
             <a href={props.project.preview} target="_blank" rel="noreferrer">
               {isWeb ? (
                 <i className="fa-solid fa-up-right-from-square"></i>
