@@ -7,7 +7,7 @@ export const projects = [
       "Practice English listening skills through dictation with AI transcriptions.",
     skills: "Next.js, FastAPI, TailwindCSS, Whisper, TypeScript",
     github: "",
-    preview: "https://listenwise.vercel.app/",
+    preview: "https://listendictation.com/",
     type: "web",
   },
   {
