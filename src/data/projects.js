@@ -5,7 +5,7 @@ export const projects = [
       "https://raw.githubusercontent.com/lehuubao1810/portfolio/main/public/img/listendictation.png",
     description:
       "Practice English listening skills through dictation with AI transcriptions.",
-    skills: "Next.js, FastAPI, TailwindCSS, Whisper, TypeScript",
+    skills: "Next.js, FastAPI, TailwindCSS, TypeScript",
     github: "",
     preview: "https://listendictation.com/",
     type: "web",
