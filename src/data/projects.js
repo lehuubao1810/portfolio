@@ -1,5 +1,16 @@
 export const projects = [
   {
+    title: "Listen Dictation",
+    image:
+      "https://raw.githubusercontent.com/lehuubao1810/portfolio/main/public/img/listendictation.png",
+    description:
+      "Practice English listening skills through dictation with AI transcriptions.",
+    skills: "Next.js, FastAPI, TailwindCSS, Whisper, TypeScript",
+    github: "",
+    preview: "https://listenwise.vercel.app/",
+    type: "web",
+  },
+  {
     title: "Shop BB",
     image:
       "https://raw.githubusercontent.com/lehuubao1810/portfolio/main/public/img/shopbb.png",
@@ -19,17 +30,6 @@ export const projects = [
     github: "https://github.com/lehuubao1810/quizMobile",
     preview:
       "https://www.canva.com/design/DAGJV3mKt24/VtBG8oe1gMUY7TC4Bw5IAA/view?utm_content=DAGJV3mKt24&utm_campaign=designshare&utm_medium=link&utm_source=editor",
-    type: "web",
-  },
-  {
-    title: "Listen Dictation",
-    image:
-      "https://raw.githubusercontent.com/lehuubao1810/portfolio/main/public/img/listendictation.png",
-    description:
-      "Practice English listening skills through dictation with AI transcriptions.",
-    skills: "Next.js, FastAPI, TailwindCSS, Whisper, TypeScript",
-    github: "",
-    preview: "https://listenwise.vercel.app/",
     type: "web",
   },
   {
