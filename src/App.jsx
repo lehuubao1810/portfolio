@@ -1,20 +1,18 @@
-import { useRef, useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import BtnToTop from "./components/BtnToTop";
-import { CardProjectItem } from "./components/CardProjectItem";
 import { projects } from "./data/projects";
 import { experiences } from "./data/experiences";
 import { skills } from "./data/skills";
-import { FormContact } from "./components/FormContact";
 import { Toaster } from "react-hot-toast";
 import pdf from "./assets/CV/LeHuuBao_Frontend_CV.pdf";
 import { DisplayPDF } from "./components/DisplayPDF";
 
 function App() {
   const [isShowCV, setIsShowCV] = useState(false);
+  const [activeSection, setActiveSection] = useState("top");
 
   const handleCV = () => {
-    // check if user is on mobile
     if (
       navigator.userAgent.match(/Android/i) ||
       navigator.userAgent.match(/iPhone/i)
@@ -28,170 +26,227 @@ function App() {
     }
   };
 
-  const navLinks = [
-    { name: "Projects", href: "projects" },
-    { name: "Experience", href: "experience" },
-    { name: "Skills", href: "skills" },
-    { name: "Contact", href: "contact" },
+  const navItems = [
+    { id: "projects", label: "Work" },
+    { id: "experience", label: "Exp" },
+    { id: "skills", label: "Skills" },
+    { id: "contact", label: "Contact" },
   ];
 
-  const [activeLink, setActiveLink] = useState("");
-
-  const [tabExperience, setTabExperience] = useState(experiences[0]);
-
-  const appRef = useRef(null);
-
-  const handleScrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    window.scrollTo({
-      top: section.offsetTop - 100,
-      behavior: "smooth",
-    });
+  const scrollTo = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
-  window.onscroll = () => {
-    // check scroll to what section
-    const sections = document.querySelectorAll("section");
-    let current = "";
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      if (window.scrollY >= sectionTop - sectionHeight / 3) {
-        current = section.getAttribute("id");
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["top", "projects", "experience", "skills", "contact"];
+
+      // Check if we are at the bottom of the page
+      if (
+        window.innerHeight + window.scrollY >=
+        document.body.offsetHeight - 50
+      ) {
+        setActiveSection("contact");
+        return;
       }
-    });
-    // add active class to nav link
-    navLinks.forEach((navLink) => {
-      if (navLink.href.includes(current)) {
-        setActiveLink(navLink.name);
-      }
-    });
-  };
+
+      const current = sections.find((section) => {
+        const el = document.getElementById(section);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          // Adjusted range for better detection
+          return rect.top >= -300 && rect.top <= 400;
+        }
+        return false;
+      });
+      if (current) setActiveSection(current);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <>
+    <div className="App">
       <Toaster position="bottom-left" reverseOrder={true} />
       {isShowCV && <DisplayPDF pdf={pdf} setIsShowCV={setIsShowCV} />}
-      <div className="App" ref={appRef}>
-        <header className="App-header">
-          <div className="blurBox">
-            <ul className="nav">
-              {navLinks.map((navLink, index) => (
-                <li
-                  key={index}
-                  onClick={() => {
-                    setActiveLink(navLink.name);
-                    handleScrollToSection(navLink.href);
-                  }}
-                  className={`nav-link ${
-                    activeLink === navLink.name ? "active" : ""
-                  }`}
-                >
-                  {navLink.name}
-                  <div className="underline"></div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </header>
-        <section id="top">
-          <h4>
-            <i className="fas fa-code"></i> Software Developer
-          </h4>
-          <h1>
-            Hi, <span style={{ color: "#01fd9c" }}>I'm Le Huu Bao</span>
-          </h1>
-          <button onClick={handleCV} className="cv">
-            My CV
-          </button>
-        </section>
-        <section id="projects">
-          <div className="line"></div>
-          <h1>{"</projects>"}</h1>
-          <div className="cards">
-            {projects.map((project, index) => (
-              <CardProjectItem key={index} project={project} />
-            ))}
-          </div>
-        </section>
-        <section id="experience">
-          <div className="line"></div>
-          <h1>{"</experience>"}</h1>
-          <div className="experience">
-            <div className="tabs">
-              {experiences.map((experience, index) => (
-                <div
-                  key={index}
-                  onClick={() => setTabExperience(experience)}
-                  className={`tab ${
-                    tabExperience.company === experience.company ? "active" : ""
-                  }`}
-                >
-                  <h3>{experience.company}</h3>
-                  <p>{experience.time}</p>
-                </div>
-              ))}
-            </div>
-            <div className="tab-content">
-              <h2>{tabExperience.title}</h2>
-              <ul>
-                {tabExperience.description.map((desc, index) => (
-                  <li key={index}>
-                    <span style={{ color: "#01fd9c" }}>- </span>
-                    {desc}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section>
-        <section id="skills">
-          <div className="line"></div>
-          <h1>{"</skills>"}</h1>
-          <div className="skills">
-            {skills.map((skill, index) => (
-              <div className="skill" key={index}>
-                <p>{skill}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-        <section id="contact">
-          <div className="line"></div>
-          <h1>{"</contact>"}</h1>
-          <div className="contact">
-            <h1>Le Huu Bao</h1>
-            <div className="contact-link">
-              <p>
-                <a
-                  href="mailto:lehuubao2909@gmail.com"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <i className="fas fa-envelope"></i>
-                </a>
-              </p>
-              <p>
-                <a
-                  href="https://github.com/lehuubao1810"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <i className="fab fa-github"></i>
-                </a>
-              </p>
-            </div>
-            <FormContact />
-          </div>
-        </section>
-        <footer>
-          <div className="line"></div>
-          <p className="footer">Create by LeHuuBao @2023</p>
-        </footer>
 
-        <BtnToTop />
+      {/* Brand Name */}
+      <div className="brand-name" onClick={() => scrollTo("top")}>
+        Le Huu Bao
       </div>
-    </>
+
+      {/* Floating Navigation */}
+      <nav className="nav-container">
+        {navItems.map((item) => (
+          <div
+            key={item.id}
+            className={`nav-item ${activeSection === item.id ? "active" : ""}`}
+            onClick={() => scrollTo(item.id)}
+          >
+            {item.label}
+          </div>
+        ))}
+        <div className="nav-item" onClick={handleCV}>
+          CV
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section id="top" className="hero-section">
+        <div className="hero-manifesto">
+          <h1 className="hero-title">
+            <span className="outline-text">Creative</span>
+            <span className="filled-text">Developer</span>
+            <span className="outline-text">& Designer</span>
+          </h1>
+          <p className="hero-subtitle">
+            I build digital experiences that blend technical precision with
+            artistic chaos. Based in Vietnam, working globally.
+          </p>
+          <button className="hero-cta" onClick={() => scrollTo("projects")}>
+            Explore Work
+          </button>
+        </div>
+      </section>
+
+      {/* Projects Section - Z Pattern */}
+      <section id="projects" className="projects-section">
+        <div className="section-header">
+          <span>Selected Works</span>
+          <span className="section-number">01</span>
+        </div>
+
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className={`project-row ${index % 2 !== 0 ? "reverse" : ""}`}
+          >
+            <div className="project-visual">
+              <img src={project.image} alt={project.title} />
+            </div>
+            <div className="project-info">
+              <h2 className="project-title">{project.title}</h2>
+              <div className="project-tags">
+                {project.skills.split(", ").map((skill, i) => (
+                  <span key={i} className="tag">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+              <p className="project-desc">{project.description}</p>
+              <div className="project-links">
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="project-link repo-link"
+                  >
+                    Visit Repo <span>↗</span>
+                  </a>
+                )}
+                <a
+                  href={project.preview}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="project-link"
+                >
+                  Visit Site <span>→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </section>
+
+      {/* Experience Section - Interactive List */}
+      <section id="experience" className="experience-section">
+        <div className="section-header">
+          <span>Experience</span>
+          <span className="section-number">02</span>
+        </div>
+
+        <div className="exp-list">
+          {experiences.map((exp, index) => (
+            <div key={index} className="exp-item">
+              <div className="exp-header">
+                <h3 className="exp-company">{exp.company}</h3>
+                <span className="exp-role">
+                  {exp.title} // {exp.time}
+                </span>
+              </div>
+              <div className="exp-details">
+                <ul>
+                  {exp.description.map((desc, i) => (
+                    <li key={i}>{desc}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Skills Section - Cloud */}
+      <section id="skills" className="skills-section">
+        <div className="section-header">
+          <span>Tech Stack</span>
+          <span className="section-number">03</span>
+        </div>
+        <div className="skills-cloud">
+          {skills.map((skill, index) => (
+            <div key={index} className="skill-pill">
+              {skill}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="contact-section">
+        <h2 className="contact-title">Let's Talk</h2>
+        <a href="mailto:lehuubao2909@gmail.com" className="contact-btn">
+          Say Hello
+        </a>
+        <div className="contact-socials">
+          <a
+            href="https://github.com/lehuubao1810"
+            target="_blank"
+            rel="noreferrer"
+            className="social-link"
+          >
+            GitHub
+          </a>
+          <span className="separator">/</span>
+          <a
+            href="https://www.linkedin.com/in/lehuubao2909/"
+            target="_blank"
+            rel="noreferrer"
+            className="social-link"
+          >
+            LinkedIn
+          </a>
+          {/* <span className="separator">/</span>
+          <a
+            href="https://www.facebook.com/lehuubao1810"
+            target="_blank"
+            rel="noreferrer"
+            className="social-link"
+          >
+            Facebook
+          </a> */}
+        </div>
+      </section>
+
+      <footer className="footer">
+        © 2023 Le Huu Bao. All Rights Reserved.
+      </footer>
+
+      <BtnToTop />
+    </div>
   );
 }
 
